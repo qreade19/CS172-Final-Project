@@ -11,5 +11,6 @@ public:
 	void ShuffleDeck(int n);
 	void DrawPile();
 	void DiscardPile();
+	void DealCards();
 };
 #endif // !1
