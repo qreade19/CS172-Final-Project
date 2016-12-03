@@ -11,6 +11,7 @@ Player::Player() {
 string Player::getUsername() {
 	return username;
 }
+//shows players hand
 int Player::getHand() {
 	vector<Cards> cards;
 	return PlayerHand;

@@ -4,11 +4,15 @@
 #include <iostream>
 #include "Cards.h"
 #include <vector>
+#include <ctime>
+#include <cstdlib>
+#include <string>
 class Deck : public Cards {
 private:
-	vector<Cards> cards;
+
 public:
-	void ShuffleDeck(int n);
+	Cards cards[108];
+	void ShuffleDeck();
 	void DrawPile();
 	void DiscardPile();
 	void DealCards();

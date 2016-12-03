@@ -8,7 +8,7 @@ Cards::Cards()
 	color[1] = "Blue";
 	color[2] = "Yellow";
 	color[3] = "Green";
-	color[4] = "Black";
+	color[4] = "Black"; //draw four and color change are the only black cards
 }
 
 //returns the total number of cards
