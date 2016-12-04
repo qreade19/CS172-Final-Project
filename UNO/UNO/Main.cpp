@@ -24,7 +24,7 @@ int main()
 		cout << "Ok lets begin. " << endl;
 		//this is where the main code for the program will be. 
 		Game* UnoGame = new Game;
-		//UnoGame.WhoGoesFist();
+		//UnoGame.WhoGoesFirst();
 		delete UnoGame;
 		return 0;
 	}

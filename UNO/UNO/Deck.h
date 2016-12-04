@@ -9,7 +9,7 @@
 #include <string>
 class Deck : public Cards {
 private:
-	vector<char> Deck;
+	vector<char> deck;
 public:
 	Cards cards[108];
 	Deck();
