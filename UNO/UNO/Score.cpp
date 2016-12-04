@@ -38,10 +38,10 @@ void Score::RestoreScore() {
 			string username;
 			int score;
 			fin >> username >> score;
-			if (username.length() > 0) {
+			if (username.length() > 0) 
+			{
 				//Player p(username, score);
 			}
 		}
 	}
-	
 }
