@@ -9,12 +9,11 @@
 #include <string>
 class Deck : public Cards {
 private:
-
+	vector<char> Deck;
 public:
 	Cards cards[108];
 	Deck();
 	void ShuffleDeck();
-	void DrawPile();
 	void DiscardPile();
 	void DealCards();
 };

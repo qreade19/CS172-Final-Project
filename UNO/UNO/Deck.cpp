@@ -24,12 +24,11 @@ void Deck::ShuffleDeck()
 	cards[a] = temp;
 	}
 }
-void Deck::DrawPile() {
 
-}
 void Deck::DiscardPile() {
 
 }
+
 void Deck::DealCards() {
 	//the dealing of seven cards to each player for a new game
 	for (int i = 0; i < 7; i++) {
