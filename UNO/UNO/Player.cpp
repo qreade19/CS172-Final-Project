@@ -6,7 +6,7 @@
 using namespace std;
 Player::Player(string pName) {
 	this->username = pName;
-	this->PlayerHand;
+	this->playerHand;
 }
 
 string Player::getUsername() {
@@ -24,7 +24,13 @@ void Player::playFromHand()
 }
 
 //shows players hand
-int Player::getHand() {
+char Player::getHand() {
 	//vector<Cards> cards;
-	return PlayerHand;
+	return playerHand;
+}
+
+void Player::setVictory()
+{
+	if (playerHand.size == 0)
+		victory = true;
 }

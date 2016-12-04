@@ -15,7 +15,7 @@ void Score::RulesForScore() {
 
 }
 void Score::TrackScore() {
-
+	
 }
 void Score::SaveScore() {
 ofstream fout("FinalScore.txt");

@@ -26,7 +26,6 @@ public:
 	void setColor(string newColor, int index);
 	string getSpecialCards();
 	string setSpecialCards();
-
 };
 #endif // !CARDS_H
 #pragma once

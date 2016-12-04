@@ -6,13 +6,15 @@ using namespace std;
 class Player {
 private:
 	string username;
-	int PlayerHand;
+	vector<char> playerHand;
+	bool victory;
 public:
 	Player(string pName);
 	string getUsername();
-	int getHand();
+	char getHand();
 	void addToHand();
 	void playFromHand();
+	void setVictory();
 };
 #endif // !PLAYER_H
 #pragma once

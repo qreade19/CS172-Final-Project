@@ -4,10 +4,12 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 using namespace std;
 class Score {
 private: 
-
+	int score1;
+	int score2;
 public:
 	Score();
 	~Score();
