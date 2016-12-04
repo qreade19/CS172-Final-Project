@@ -10,3 +10,6 @@ void Score::RulesForScore() {
 void Score::TrackScore() {
 
 }
+void Score::SaveScore() {
+
+}

@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include "Game.h"
 using namespace std;
 
 
@@ -22,6 +23,10 @@ int main()
 	{
 		cout << "Ok lets begin. " << endl;
 		//this is where the main code for the program will be. 
+		Game* UnoGame = new Game;
+		//UnoGame.WhoGoesFist();
+		delete UnoGame;
+		return 0;
 	}
 	else
 	{// this code stays this small

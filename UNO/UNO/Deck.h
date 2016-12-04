@@ -12,6 +12,7 @@ private:
 
 public:
 	Cards cards[108];
+	Deck();
 	void ShuffleDeck();
 	void DrawPile();
 	void DiscardPile();

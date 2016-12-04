@@ -5,15 +5,19 @@
 #include <cstdlib>
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
 
+Deck::Deck() {
+
+}
 void Deck::ShuffleDeck()
 {
 	srand(time(NULL));
 	//shuffle the deck of cards
 	for (int i; i < 108; i++) {
 	Cards temp;
-
+	//random_shuffle()
 	int a = rand() % 107;
 	temp = cards[i];
 	cards[i] = cards[a];

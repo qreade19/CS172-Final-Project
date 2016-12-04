@@ -1,9 +1,13 @@
 #include <iostream>
 #include "Cards.h"
+#include <vector>
+#include <string>
+#include "Player.h"
 using namespace std;
 Cards::Cards()
 {
 	TotalNumberOfCards = 108;
+
 	color[0] = "Red";
 	color[1] = "Blue";
 	color[2] = "Yellow";
@@ -42,5 +46,31 @@ string Cards::getSpecialCards()
 
 string Cards::setSpecialCards()
 {
+	vector <Player> hand;
+	int wild;
+	switch (wild)
+	{
+	case DrawTwo:
+		cout << "Draw Two";
+		for (int i = 0; i < 2; i++) {
+			
+		}
+		break;
+	case Skip:
+		cout << "Skip";
+		break;
+	case DrawFour:
+		cout << "Draw Four";
+		for (int i = 0; i < 4; i++) {
+
+		}
+		break;
+	case Reverse:
+		cout << "Reverse";
+		break;
+	case ChangeColor:
+		cout << "Change Color";
+		break;
+	}
 	return NULL;
 }
