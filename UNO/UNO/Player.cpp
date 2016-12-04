@@ -4,15 +4,27 @@
 #include <vector>
 #include "Cards.h"
 using namespace std;
-Player::Player() {
-	this->username;
+Player::Player(string pName) {
+	this->username = pName;
 	this->PlayerHand;
 }
+
 string Player::getUsername() {
 	return username;
 }
+
+void Player::addToHand()
+{
+
+}
+
+void Player::playFromHand()
+{
+
+}
+
 //shows players hand
 int Player::getHand() {
-	vector<Cards> cards;
+	//vector<Cards> cards;
 	return PlayerHand;
 }

@@ -8,9 +8,11 @@ private:
 	string username;
 	int PlayerHand;
 public:
-	Player();
+	Player(string pName);
 	string getUsername();
 	int getHand();
+	void addToHand();
+	void playFromHand();
 };
 #endif // !PLAYER_H
 #pragma once
