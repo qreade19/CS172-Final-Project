@@ -46,7 +46,6 @@ string Cards::getSpecialCards()
 
 string Cards::setSpecialCards()
 {
-	string changedcolor;
 	vector <Player> hand;
 	int wild;
 	switch (wild)
@@ -71,9 +70,6 @@ string Cards::setSpecialCards()
 		break;
 	case ChangeColor:
 		cout << "Change Color";
-		cout << "What color would you like the change the pile to? (Red, Blue, Green or Yellow)";
-		cin >> changedcolor;
-
 		break;
 	}
 	return NULL;
