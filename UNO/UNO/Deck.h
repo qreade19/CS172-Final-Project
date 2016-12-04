@@ -7,10 +7,14 @@
 #include <ctime>
 #include <cstdlib>
 #include <string>
+#include "Player.h"
 class Deck : public Cards {
 private:
 	vector<char> deck;
 public:
+	Player** player;
+	Cards** stock;
+	unsigned NumStockPile;
 	Cards cards[108];
 	Deck();
 	void ShuffleDeck();

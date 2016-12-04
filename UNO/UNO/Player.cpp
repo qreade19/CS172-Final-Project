@@ -13,9 +13,10 @@ string Player::getUsername() {
 	return username;
 }
 
-void Player::addToHand()
+void Player::addToHand(Cards* addCard)
 {
-
+	cards[numcards] = addCard;
+	numcards++;
 }
 
 void Player::playFromHand()
