@@ -9,6 +9,7 @@
 #include <fstream>
 #include <ctime>
 #include <cstdlib>
+#include "Deck.h"
 int Game::Menu() {
 	string answer;
 	cout << "Welcome to the game UNO." << endl;
@@ -19,7 +20,9 @@ int Game::Menu() {
 	{
 		cout << "Ok lets begin. " << endl;
 		//this is where the main code for the program will be. 
-
+		Deck d;
+		d.ShuffleDeck();
+		d.DealCards();
 	}
 	else
 	{// this code stays this small

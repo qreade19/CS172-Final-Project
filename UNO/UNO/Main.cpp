@@ -11,11 +11,11 @@
 #include "Game.h"
 using namespace std;
 
-
 int main()
 {
 	Game* UnoGame = new Game;
 	//UnoGame.WhoGoesFirst();
+	UnoGame->Menu();
 
 	delete UnoGame;
 	return 0;
