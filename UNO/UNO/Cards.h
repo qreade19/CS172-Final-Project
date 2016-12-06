@@ -11,7 +11,6 @@ private:
 	string color[5];
 	int cardNumber;
 	string SpecialCard;
-	int TotalNumberOfCards;
 
 public:
 	static const int DrawTwo=20;
@@ -20,8 +19,6 @@ public:
 	static const int Reverse=23;
 	static const int ChangeColor=24;
 	Cards();
-	int getTotalNumberOfCards();
-	void setTotalNumberOfCards(int numCards);
 	string getColor(int index);
 	void setColor(string newColor, int index);
 	string getSpecialCards();

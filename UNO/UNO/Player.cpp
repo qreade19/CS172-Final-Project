@@ -33,6 +33,6 @@ char Player::getHand()
 
 void Player::setVictory()
 {
-	if (playerHand.size == 0)
+	if (playerHand.size() == 0)
 		victory = true;
 }

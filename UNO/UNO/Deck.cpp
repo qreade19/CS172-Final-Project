@@ -11,12 +11,13 @@ using namespace std;
 Deck::Deck() {
 	stock = 0;
 	NumStockPile = 0;
+	TotalNumberOfCards = 108;
 }
 void Deck::ShuffleDeck()
 {
 	srand(time(NULL));
 	//shuffle the deck of cards
-	for (unsigned int i; i < 108; i++) {
+	for (int i; i < 108; i++) {
 	Cards temp;
 	//random_shuffle()
 	int a = rand() % 108;
@@ -25,8 +26,19 @@ void Deck::ShuffleDeck()
 	cards[a] = temp;
 	}
 }
+//returns the total number of cards
+int Deck::getTotalNumberOfCards()
+{
+	return TotalNumberOfCards;
+}
 
+void Deck::setTotalNumberOfCards(int numCards)
+{
+	//actual total number of cards in the deck
+	TotalNumberOfCards = numCards;
+}
 void Deck::DiscardPile() {
+
 
 }
 

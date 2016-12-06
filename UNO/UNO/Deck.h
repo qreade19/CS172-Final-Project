@@ -11,12 +11,15 @@
 class Deck : public Cards {
 private:
 	vector<char> deck;
+	int TotalNumberOfCards;
 public:
 	Player** player;
 	Cards** stock;
 	unsigned NumStockPile;
 	Cards cards[108];
 	Deck();
+	int getTotalNumberOfCards();
+	void setTotalNumberOfCards(int numCards);
 	void ShuffleDeck();
 	void DiscardPile();
 	void DealCards();

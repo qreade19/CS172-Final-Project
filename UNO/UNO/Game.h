@@ -11,6 +11,7 @@
 using namespace std;
 class Game {
 public:
+	int Menu();
 	void WhoGoesFirst();
 };
 #endif // !GAME_H#pragma once
