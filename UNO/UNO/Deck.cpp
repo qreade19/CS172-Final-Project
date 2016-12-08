@@ -16,7 +16,11 @@ Deck::Deck()
 		Cards* c = new Cards(temp[i], 0);
 		deck.push_back(c);
 	}
+	for (int i = 1; i < 13; i++)
+	{
+		string temp[4] = { "Red", "Blue", "Green", "Yellow" };
 
+	}
 }
 void Deck::ShuffleDeck()
 {
