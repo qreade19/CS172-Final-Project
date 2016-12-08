@@ -6,21 +6,20 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <stack>
 using namespace std;
 
 Deck::Deck() {
-	stock = 0;
-	NumStockPile = 0;
 	TotalNumberOfCards = 108;
 }
 void Deck::ShuffleDeck()
 {
 	srand(time(NULL));
 	//shuffle the deck of cards
-	for (int i; i < 108; i++) {
+	for (int i=0; i < TotalNumberOfCards; i++) {
 	Cards temp;
 	//random_shuffle()
-	int a = rand() % 108;
+	int a = rand() % TotalNumberOfCards;
 	temp = cards[i];
 	cards[i] = cards[a];
 	cards[a] = temp;
@@ -42,16 +41,18 @@ void Deck::DiscardPile() {
 
 }
 
-void Deck::DealCards() {
+void Deck::DealCards(stack<Cards*>& deck, Player addToHand[]) {
 	//the dealing of seven cards to each player for a new game
 	for (int i = 0; i < 7; i++) {
 		for (int p = 0; p < 2; p++) {
-			if (NumStockPile < 1) {
+			if (TotalNumberOfCards < 1) {
 				cout << "Ran out of cards.\n";
 			}
-			NumStockPile--;
-			player[p]->addToHand(stock[NumStockPile]);
-			cards[NumStockPile];
+			else {
+				//TotalNumberOfCards--;
+				addToHand[p] += deck.top();
+				deck.pop();
+			}
 		}
 		
 	}

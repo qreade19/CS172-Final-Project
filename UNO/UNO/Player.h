@@ -8,14 +8,16 @@
 using namespace std;
 class Player {
 private:
-	Cards** cards;
 	int numCards;
 	int currentCards;
-	string username;
+	string Username;
 	vector<char> playerHand;
 	bool victory;
+	vector <Cards*> cards;
 public:
-	Player(string pName);
+	Player();
+	Player& operator+(Cards* c);
+	Player& operator+=(Cards* c);
 	string getUsername();
 	char getHand();
 	void addToHand(Cards* addCard);
