@@ -1,0 +1,11 @@
+*.tlog
+*.obj
+*.suo
+UNO/Debug/UNO.exe
+*.ilk
+UNO/Debug/UNO.pdb
+*.db
+UNO/UNO/Debug/UNO.log
+*.enc
+UNO/UNO/Debug/vc140.idb
+*.pdb
