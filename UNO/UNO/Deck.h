@@ -8,18 +8,15 @@
 #include <cstdlib>
 #include <string>
 #include "Player.h"
-class Deck : public Cards {
+class Deck
+{
 private:
-	vector<char> deck;
-	int TotalNumberOfCards;
+	vector<Cards*> deck;
 public:
 	Player** player;
 	Cards** stock;
 	unsigned NumStockPile;
-	Cards cards[108];
 	Deck();
-	int getTotalNumberOfCards();
-	void setTotalNumberOfCards(int numCards);
 	void ShuffleDeck();
 	void DiscardPile();
 	void DealCards();

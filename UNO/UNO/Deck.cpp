@@ -8,35 +8,31 @@
 #include <algorithm>
 using namespace std;
 
-Deck::Deck() {
-	stock = 0;
-	NumStockPile = 0;
-	TotalNumberOfCards = 108;
+Deck::Deck() 
+{
+	for (int i = 0; i < 4; i++)
+	{
+		string temp[4] = { "Red", "Blue", "Green", "Yellow" };
+		Cards* c = new Cards(temp[i], 0);
+		deck.push_back(c);
+	}
+
 }
 void Deck::ShuffleDeck()
 {
 	srand(time(NULL));
 	//shuffle the deck of cards
 	for (int i; i < 108; i++) {
-	Cards temp;
+	Cards* temp;
 	//random_shuffle()
 	int a = rand() % 108;
-	temp = cards[i];
-	cards[i] = cards[a];
-	cards[a] = temp;
+	temp = deck[i];
+	deck[i] = deck[a];
+	deck[a] = temp;
 	}
 }
 //returns the total number of cards
-int Deck::getTotalNumberOfCards()
-{
-	return TotalNumberOfCards;
-}
 
-void Deck::setTotalNumberOfCards(int numCards)
-{
-	//actual total number of cards in the deck
-	TotalNumberOfCards = numCards;
-}
 void Deck::DiscardPile() {
 
 
@@ -51,7 +47,7 @@ void Deck::DealCards() {
 			}
 			NumStockPile--;
 			player[p]->addToHand(stock[NumStockPile]);
-			cards[NumStockPile];
+			deck[NumStockPile];
 		}
 		
 	}

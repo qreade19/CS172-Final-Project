@@ -7,10 +7,8 @@ using namespace std;
 
 class Cards {
 private:
-	string cardNames;
-	string color[5];
+	string color;
 	int cardNumber;
-	string SpecialCard;
 
 public:
 	static const int DrawTwo=20;
@@ -18,10 +16,7 @@ public:
 	static const int DrawFour=22;
 	static const int Reverse=23;
 	static const int ChangeColor=24;
-	Cards();
-	string getColor(int index);
-	void setColor(string newColor, int index);
-	string getSpecialCards();
+	Cards(string color, int number);
 	string setSpecialCards();
 };
 #endif // !CARDS_H
