@@ -11,6 +11,7 @@
 using namespace std;
 class Game {
 public:
+	string name;
 	int Menu();
 	void WhoGoesFirst();
 };

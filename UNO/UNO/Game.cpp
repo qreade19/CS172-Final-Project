@@ -10,6 +10,7 @@
 #include <ctime>
 #include <cstdlib>
 #include "Deck.h"
+#include <stack>
 using namespace std;
 
 int Game::Menu() {
@@ -22,11 +23,15 @@ int Game::Menu() {
 	if (answer == "Yes")
 	{
 		cout << "Ok lets begin. " << endl;
+		/*cout << "What would you like your username to be? ";
+		cin >> name;
+		name == "Player 1";
+		cout << "Ok, " << name << " lets begin. \n";*/
 		//this is where the main code for the program will be. 
 		Deck d;
-		stack<Cards*> deck;
+		//stack<Cards*> deck;
 		Player players[2];
-		d.ShuffleDeck();
+		//d.ShuffleDeck();
 		WhoGoesFirst();		
 		//d.DealCards(deck,players);
 		Score s;
@@ -47,6 +52,15 @@ void Game::WhoGoesFirst(){
 	srand(time(NULL));
 	//2 is equal to number of players
 	int turn = rand() % 2;
-	cout << "Player " << turn << " goes first. \n";
+	//cout << "Player " << turn << " goes first. \n";
+	if (turn == 1)
+	{
+		cout <<"Player 1 goes first. \n";
+
+		}
+	else
+	{
+		cout << "Computer goes first. \n";
+	}
 
 }

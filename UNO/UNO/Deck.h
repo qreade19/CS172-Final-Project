@@ -8,17 +8,15 @@
 #include <cstdlib>
 #include <string>
 #include "Player.h"
+#include <stack>
 class Deck
 {
 private:
 	vector<Cards*> deck;
 public:
-	Player** player;
-	Cards** stock;
-	unsigned NumStockPile;
 	Deck();
 	void ShuffleDeck();
 	void DiscardPile();
-	void DealCards();
+	void DealCards(stack<Cards*>& deck, Player addToHand[]);
 };
 #endif // !1

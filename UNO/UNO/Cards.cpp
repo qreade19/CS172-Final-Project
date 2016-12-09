@@ -21,7 +21,8 @@ string Cards::setSpecialCards()
 	case DrawTwo:
 		cout << "Draw Two";
 		for (int i = 0; i < 2; i++) {
-			
+			Player p;
+			//p.addToHand(i);
 		}
 		break;
 	case Skip:
@@ -30,17 +31,19 @@ string Cards::setSpecialCards()
 	case DrawFour:
 		cout << "Draw Four";
 		for (int i = 0; i < 4; i++) {
+			Player p;
+		//	p.addToHand(i);
 
 		}
 		break;
 	case Reverse:
-		cout << "Reverse";
+			cout << "Reverse";
 		break;
 	case ChangeColor:
 		cout << "Change Color";
-		cout << "What color would you like the change the pile to? (Red, Blue, Green or Yellow)";
-		cin >> changedcolor;
 
+			cout << "What color would you like the change the pile to? (Red, Blue, Green or Yellow)";
+			cin >> changedcolor;
 		break;
 	}
 	return NULL;
