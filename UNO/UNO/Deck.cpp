@@ -15,11 +15,29 @@ Deck::Deck()
 		string temp[4] = { "Red", "Blue", "Green", "Yellow" };
 		Cards* c = new Cards(temp[i], 0);
 		deck.push_back(c);
+		delete c;
 	}
 	for (int i = 1; i < 13; i++)
 	{
-		string temp[4] = { "Red", "Blue", "Green", "Yellow" };
-
+		for (int j = 0; j < 4; j++)
+		{
+			string temp[4] = { "Red", "Blue", "Green", "Yellow" };
+			Cards* c = new Cards(temp[j], i);
+			for (int k = 0; k < 2; k++)
+			{
+				deck.push_back(c);
+			}
+			delete c;
+		}
+	}
+	for (int i = 13; i < 15; i++)
+	{
+		Cards* c = new Cards("Black", i);
+		for (int j = 0; j < 4; j++)
+		{
+			deck.push_back(c);
+		}
+		delete c;
 	}
 }
 void Deck::ShuffleDeck()
@@ -37,12 +55,13 @@ void Deck::ShuffleDeck()
 }
 //returns the total number of cards
 
-void Deck::DiscardPile() {
-
+void Deck::DiscardPile() 
+{
 
 }
 
-void Deck::DealCards() {
+void Deck::DealCards() 
+{
 	//the dealing of seven cards to each player for a new game
 	for (int i = 0; i < 7; i++) {
 		for (int p = 0; p < 2; p++) {

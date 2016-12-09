@@ -24,7 +24,6 @@ int Game::Menu() {
 		cout << "Ok lets begin. " << endl;
 		//this is where the main code for the program will be. 
 		Deck d;
-		stack<Cards*> deck;
 		Player players[2];
 		d.ShuffleDeck();
 		WhoGoesFirst();		
