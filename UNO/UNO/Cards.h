@@ -11,11 +11,11 @@ private:
 	int cardNumber;
 
 public:
-	static const int DrawTwo=20;
-	static const int Skip=21;
-	static const int DrawFour=22;
-	static const int Reverse=23;
-	static const int ChangeColor=24;
+	static const int DrawTwo=10;
+	static const int Skip=11;
+	static const int DrawFour=14;
+	static const int Reverse=12;
+	static const int ChangeColor=13;
 	Cards(string color, int number);
 	string setSpecialCards();
 };
