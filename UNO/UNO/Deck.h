@@ -13,10 +13,11 @@ class Deck
 {
 private:
 	vector<Cards*> deck;
+	vector<Cards*> discard;
 public:
 	Deck();
 	void ShuffleDeck();
-	void DiscardPile();
+	void DiscardPileStart();
 	void DealCards(stack<Cards*>& deck, Player addToHand[]);
 };
 #endif // !1

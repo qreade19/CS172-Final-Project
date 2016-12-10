@@ -56,12 +56,13 @@ void Deck::ShuffleDeck()
 }
 //returns the total number of cards
 
-void Deck::DiscardPile() 
+void Deck::DiscardPileStart() 
 {
-
+	Cards* temp = deck.back;
+	discard.push_back(temp);
 }
 
-void Deck::DealCards() {
+void Deck::DealCards(stack<Cards*>& deck, Player addToHand[]) {
 	//the dealing of seven cards to each player for a new game
 	for (int i = 0; i < 7; i++) {
 		for (int p = 0; p < 2; p++) {

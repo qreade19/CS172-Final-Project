@@ -21,7 +21,9 @@ void Player::addToHand(Cards* addCard)
 
 void Player::playFromHand()
 {
-
+	int choice;
+	cout << "Choose a card to discard: ";
+	cin >> choice;
 }
 
 Player& Player::operator+(Cards* c) {
@@ -33,10 +35,13 @@ Player& Player::operator+=(Cards* c) {
 	return *this + c;
 }
 //shows players hand
-Cards* Player::getHand() 
+void Player::getHand() 
 {
-	//vector<Cards> cards;
-	return playerHand[1];
+	cout << "Your hand is:" << endl;
+	for (int i = 0; i < playerHand.size(); i++)
+	{
+		cout << playerHand[i] << ", ";
+	}
 }
 
 void Player::setVictory()

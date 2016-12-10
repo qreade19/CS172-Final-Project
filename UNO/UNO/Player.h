@@ -19,7 +19,7 @@ public:
 	Player& operator+(Cards* c);
 	Player& operator+=(Cards* c);
 	string getUsername();
-	Cards* getHand();
+	void getHand();
 	void addToHand(Cards* addCard);
 	void playFromHand();
 	void setVictory();

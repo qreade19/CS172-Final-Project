@@ -4,9 +4,14 @@
 #include <string>
 using namespace std;
 class Entry {
-public:
-	Entry(string user, int s);
+private:
 	string username;
 	int score;
+public:
+	Entry(string user, int s);
+	string getUsername();
+	void setUserName(string user);
+	int getScore();
+	void setScore(int score);
 };
 #endif // !ENTRY_H#pragma once
