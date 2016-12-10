@@ -10,9 +10,9 @@ using namespace std;
 class Score {
 private: 
 	vector <Entry> entries;
-	int score1;
-	int score2;
+	int score;
 public:
+	int getScore();
 	Score();
 	~Score();
 	void RulesForScore();

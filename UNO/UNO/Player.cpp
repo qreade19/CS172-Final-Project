@@ -5,12 +5,7 @@
 #include "Cards.h"
 using namespace std;
 Player::Player() {
-	this->Username;
-	this->playerHand;
-}
-
-string Player::getUsername() {
-	return Username;
+	playerhand = 7;
 }
 
 void Player::addToHand(Cards* addCard)
@@ -23,11 +18,11 @@ void Player::playFromHand()
 {
 
 }
+//Player& Player::operator+(Cards* c) {
+//	cards.push_back(c);
+//	return *this;
+//}
 Player& Player::operator+(Cards* c) {
-	cards.push_back(c);
-	return *this;
-}
-Player& Player::operator+=(Cards* c) {
 	return *this + c;
 }
 //shows players hand

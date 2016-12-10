@@ -13,7 +13,13 @@ Score::~Score() {
 	SaveScore();
 }
 void Score::RulesForScore() {
+	vector < char> PlayersHand;
+	if (PlayersHand.size() == 1) {
+		cout << "UNO!" << endl;
+	}
 
+}int Score::getScore() {
+	return score;
 }
 void Score::TrackScore(Entry& newEntry) {
 	bool dup = false;
@@ -23,6 +29,7 @@ void Score::TrackScore(Entry& newEntry) {
 			entries.push_back(newEntry);
 		}
 	}
+	
 }
 void Score::SaveScore() {
 ofstream fout("FinalScore.txt");
@@ -45,14 +52,16 @@ void Score::RestoreScore() {
 	else {
 		while (!fin.eof())
 		{
-			string username;
-			int score;
-			fin >> username >> score;
-			if (username.length() > 0) 
+			string u;
+			int s;
+			fin >> u >> s;
+			if (u.length() > 0) 
 			{
-				Entry e(username, score);
+				Entry e(u, s);
 				entries.push_back(e);
 			}
+			
 		}
 	}
+	fin.close();
 }

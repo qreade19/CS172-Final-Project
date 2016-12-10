@@ -7,6 +7,6 @@ class Entry {
 public:
 	string username;
 	int score;
-	Entry(string user, int s);
+	Entry(string u, int s);
 };
 #endif // !ENTRY_H#pragma once

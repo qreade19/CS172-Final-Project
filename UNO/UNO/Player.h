@@ -10,15 +10,14 @@ class Player {
 private:
 	int numCards;
 	int currentCards;
-	string Username;
+	int playerhand;
 	vector<char> playerHand;
 	bool victory;
 	vector <Cards*> cards;
 public:
 	Player();
 	Player& operator+(Cards* c);
-	Player& operator+=(Cards* c);
-	string getUsername();
+	//Player& operator+=(Cards* c);
 	char getHand();
 	void addToHand(Cards* addCard);
 	void playFromHand();

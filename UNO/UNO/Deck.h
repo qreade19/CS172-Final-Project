@@ -12,11 +12,15 @@
 class Deck
 {
 private:
+	int topCard;
 	vector<Cards*> deck;
 public:
+	bool empty();
+	//Cards cards[108];
 	Deck();
 	void ShuffleDeck();
 	void DiscardPile();
-	void DealCards(stack<Cards*>& deck, Player addToHand[]);
+	void DealCards();
+	Cards *ptr_deck;
 };
 #endif // !1
