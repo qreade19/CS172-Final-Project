@@ -41,38 +41,35 @@ Deck::Deck()
 		delete c;
 	}
 }
+
 void Deck::ShuffleDeck()
-{
-	srand(time(NULL));
+{		
 	//shuffle the deck of cards
 	for (int i=0; i < 108; i++) {
 	Cards* temp;
-	//random_shuffle()
-	int a = rand() % 108;
+	int a = rand() % 107;
 	temp = deck[i];
 	deck[i] = deck[a];
 	deck[a] = temp;
 	}
+
 }
 //returns the total number of cards
-
-void Deck::DiscardPileStart() 
+bool Deck::empty() {
+	return topCard<=0;
+}
+void Deck::DiscardPile() 
 {
-	Cards* temp = deck.back;
-	discard.push_back(temp);
+	
 }
 
-void Deck::DealCards(stack<Cards*>& deck, Player addToHand[]) {
+void Deck::DealCards() {
+	vector <char> ddeck;
 	//the dealing of seven cards to each player for a new game
-	for (int i = 0; i < 7; i++) {
-		for (int p = 0; p < 2; p++) {
-		/*	if (TotalNumOfCards < 1) {
-				cout << "Ran out of cards.\n";
-			}*/
-			//NumStockPile--;
-			addToHand[p] + deck.top();
-			deck.pop();
-		}
+	for (int i = 0; i < 7; i++) {	
+		Player d;
+		//d.addToHand(i);
+		ddeck.push_back(i);
 		
 	}
 }
