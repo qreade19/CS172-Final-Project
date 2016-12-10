@@ -11,15 +11,15 @@ private:
 	int numCards;
 	int currentCards;
 	string Username;
-	vector<char> playerHand;
+	vector<Cards*> playerHand;
 	bool victory;
-	vector <Cards*> cards;
+	vector<Cards*> cards;
 public:
 	Player();
 	Player& operator+(Cards* c);
 	Player& operator+=(Cards* c);
 	string getUsername();
-	char getHand();
+	Cards* getHand();
 	void addToHand(Cards* addCard);
 	void playFromHand();
 	void setVictory();

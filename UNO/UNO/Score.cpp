@@ -13,7 +13,7 @@ Score::~Score() {
 	SaveScore();
 }
 void Score::RulesForScore() {
-
+	
 }
 void Score::TrackScore(Entry& newEntry) {
 	bool dup = false;

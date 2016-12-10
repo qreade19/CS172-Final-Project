@@ -15,7 +15,7 @@ string Player::getUsername() {
 
 void Player::addToHand(Cards* addCard)
 {
-	cards[numCards] = addCard;
+	playerHand[numCards] = addCard;
 	numCards++;
 }
 
@@ -23,15 +23,17 @@ void Player::playFromHand()
 {
 
 }
+
 Player& Player::operator+(Cards* c) {
 	cards.push_back(c);
 	return *this;
 }
+
 Player& Player::operator+=(Cards* c) {
 	return *this + c;
 }
 //shows players hand
-char Player::getHand() 
+Cards* Player::getHand() 
 {
 	//vector<Cards> cards;
 	return playerHand[1];

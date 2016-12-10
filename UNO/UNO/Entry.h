@@ -5,8 +5,8 @@
 using namespace std;
 class Entry {
 public:
+	Entry(string user, int s);
 	string username;
 	int score;
-	Entry(string user, int s);
 };
 #endif // !ENTRY_H#pragma once
